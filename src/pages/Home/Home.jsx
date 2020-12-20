@@ -11,7 +11,6 @@ import Contact from '../../components/Contact/Contact';
 
 const Home = () => (
     <div className='Home'>
-        <div id='begin' />
         <Header />
         <Work />
         <Skill />
