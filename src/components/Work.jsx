@@ -1,22 +1,31 @@
 import React from 'react';
-import styled from 'styled-components';
+import SectionContainer from '../styles/SectionContainer';
 
-const Work = () => (
-    <WorkContainer id='work'>
-        <h2>Work Experience</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sollicitudin augue vitae ex egestas, ac imperdiet eros blandit. Sed varius sapien turpis. Duis aliquet consequat aliquet. Nunc ullamcorper et magna in fringilla. Mauris lobortis dolor quis ipsum pellentesque, ac feugiat magna ultricies. Aliquam in nisl ipsum. Sed condimentum nibh eget laoreet tempus. Etiam est dolor, rhoncus vitae diam id, tempor blandit lectus. Etiam malesuada risus et libero auctor, eu porta nunc fermentum. Ut ligula mi, ultricies sit amet semper sed, sagittis a orci. Praesent dignissim nec purus nec ullamcorper. Nulla in augue ante. Curabitur volutpat augue fringilla euismod vehicula.
-        </p>
-        <p>
-            Ut pulvinar gravida nulla, tristique finibus arcu consequat id. Ut justo ante, volutpat in nunc congue, euismod commodo turpis. Vivamus semper leo eros, sed feugiat est viverra id. Maecenas quis mollis tortor. Nunc velit nisl, ultricies at mauris nec, mollis sodales tellus. Pellentesque metus arcu, sodales vitae pellentesque sed, mattis vel elit. Donec commodo suscipit justo, quis dapibus tellus maximus in. Nunc condimentum odio non odio commodo condimentum. Integer tincidunt felis lectus, nec pharetra dolor dapibus vitae. In dignissim orci at dolor fermentum pellentesque. Etiam ante diam, consequat id eros ut, aliquet maximus ex. Vestibulum rutrum elit sed arcu dictum venenatis. Proin egestas metus vitae arcu ullamcorper, laoreet tempus diam congue.
-        </p>
-    </WorkContainer>
+export const Work = () => (
+  <SectionContainer id='work'>
+    <h2>Work Experience</h2>
+    <div className='title'>
+      <h4>DevOps Engineer, HBO, New York, NY (Cognizant Contract)</h4>
+      <span>Aug. 2019 - Present</span>
+    </div>
+    <ul>
+      <li>Enhanced the cloud platform by automating manual tasks with serverless functions at no cost</li>
+      <li>Engineered lambda functions to generate AWS services utilization reports to drive down costs</li>
+      <li>Developed a website to scan application servers and display informational page that associates different servers based on tags</li>
+      <li>Wrote custom scripts to monitor cloud infrastructure and alert support team instead of waiting for user complaints</li>
+      <li>Assumed pivotal role in one of the company's largest cloud migrations</li>
+    </ul>
+    
+    <div className='title'>
+      <h4>Network Engineer, Millennium Communications Group, East Hanover, NJ</h4>
+      <span>July 2018 - Dec. 2018</span>
+    </div>
+    <ul>
+      <li>Programmed routers, switches, and other network devices</li>
+      <li>Performed network design, upgrade, and troubleshooting</li>
+      <li>Communicated with clients on project requirements</li>
+    </ul>
+  </SectionContainer>
 );
-
-const WorkContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`
 
 export default Work;

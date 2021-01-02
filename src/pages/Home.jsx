@@ -8,23 +8,45 @@ import Project from '../components/Project';
 import Edu from '../components/Edu';
 import Cert from '../components/Cert';
 
-const Home = () => (
-  <HomeContainer>
-    <div id='begin' />
-    <Header />
-    <Work />
-    <Skill />
-    <Project />
-    <Edu />
-    <Cert />
-  </HomeContainer>
-);
+class Home extends React.Component {
+  componentDidMount() {
+    window.addEventListener("scroll", this.resizeHeaderOnScroll);
+  }
 
-const HomeContainer = styled.div`
+  resizeHeaderOnScroll() {
+    const distanceY = window.pageYOffset || document.documentElement.scrollTop,
+      shrinkOn = 200,
+      headerEl = document.getElementById("header");
+
+    if (distanceY > shrinkOn) {
+      headerEl.classList.add("smaller");
+    } else {
+      headerEl.classList.remove("smaller");
+    }
+  }
+
+  render() {
+    return (
+      <div>
+        <div id='begin' />
+        <Header />
+        <BodyContainer>
+          <Work />
+          <Skill />
+          <Project />
+          <Edu />
+          <Cert />
+        </BodyContainer>
+      </div>
+    );
+  }
+}
+
+const BodyContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px 100px;
+  padding: 0 50px 25px;
 `
 
 export default Home;
