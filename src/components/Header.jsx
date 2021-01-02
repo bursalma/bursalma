@@ -48,9 +48,6 @@ const HeaderContainer = styled.div`
   background-color: white;
   width: 100%;
   /* transition: 0.2s; */
-  /* .smaller {
-    color: blue;
-  } */
 `
 
 const NameContainer = styled.a`
@@ -58,7 +55,7 @@ const NameContainer = styled.a`
   font-size: large;
 `
 
-const OptionsContainer = styled.a`
+const OptionsContainer = styled.div`
   margin-top: 10px;
   margin-bottom: 20px;
 

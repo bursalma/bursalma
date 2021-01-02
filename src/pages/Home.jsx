@@ -8,26 +8,29 @@ import Project from '../components/Project';
 import Edu from '../components/Edu';
 import Cert from '../components/Cert';
 
+
+
 class Home extends React.Component {
-  componentDidMount() {
-    window.addEventListener("scroll", this.resizeHeaderOnScroll);
-  }
+  // componentDidMount() {
+  //   window.addEventListener("scroll", this.resizeHeaderOnScroll);
+  // }
 
-  resizeHeaderOnScroll() {
-    const distanceY = window.pageYOffset || document.documentElement.scrollTop,
-      shrinkOn = 200,
-      headerEl = document.getElementById("header");
+  // resizeHeaderOnScroll() {
+  //   const distanceY = window.pageYOffset || document.documentElement.scrollTop,
+  //     shrinkOn = 200,
+  //     headerEl = document.getElementById("header");
+  //     console.log(headerEl.classList)
 
-    if (distanceY > shrinkOn) {
-      headerEl.classList.add("smaller");
-    } else {
-      headerEl.classList.remove("smaller");
-    }
-  }
+  //   if (distanceY > shrinkOn) {
+  //     headerEl.classList.add(SmallerContainer.styledComponentId);
+  //   } else {
+  //     headerEl.classList.remove(SmallerContainer.styledComponentId);
+  //   }
+  // }
 
   render() {
     return (
-      <div>
+      <div >
         <div id='begin' />
         <Header />
         <BodyContainer>
@@ -48,5 +51,9 @@ const BodyContainer = styled.div`
   align-items: center;
   padding: 0 50px 25px;
 `
+
+// const SmallerContainer = styled.div`
+//   color: blue;
+// `
 
 export default Home;
